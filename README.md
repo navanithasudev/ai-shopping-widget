@@ -31,12 +31,19 @@ Keep both files together when hosting the widget. The script loads its matching 
 
 ## Test the embed locally
 
-1. Build the widget with `npm run build:widget`.
-2. Start the Vite development server with `npm run dev`.
-3. Open `http://localhost:5173/embed-demo.html`.
-4. Use the floating **Ask Aura** button. Test chat, product search, add-to-cart, quantity changes, mock checkout, and voice controls.
+1. Build the storefront and widget with `npm run build:all`.
+2. Copy the generated widget files into the storefront's `dist` folder:
 
-The demo page loads `/dist-widget/aurelia-widget.js`, so build the widget before opening it. The demo page is a separate host page, not the main storefront.
+   ```powershell
+   Copy-Item dist-widget/aurelia-widget.js dist/aurelia-widget.js -Force
+   Copy-Item dist-widget/aurelia-widget.css dist/aurelia-widget.css -Force
+   ```
+
+3. Start the production preview with `npm run preview -- --host=127.0.0.1 --port=4173 --strictPort`.
+4. Open `http://localhost:4173/embed-demo.html`.
+5. Use the floating **Ask Aura** button. Test chat, product search, add-to-cart, quantity changes, mock checkout, and voice controls.
+
+The demo page loads `/aurelia-widget.js`, so copy the generated widget files into the `dist` folder before opening it. The demo page is a separate host page, not the main storefront.
 
 ## Embed it on another website
 
