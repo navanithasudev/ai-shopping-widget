@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurelia Widget Embed Demo</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; color: #273328; background: #f8f7f1; }
+    header { padding: 24px clamp(20px, 7vw, 90px); background: #344b38; color: white; }
+    main { max-width: 850px; margin: 70px auto; padding: 0 24px; line-height: 1.8; }
+    .tag { color: #71845f; font-size: 12px; letter-spacing: 2px; font-weight: 700; }
+    h1 { font-family: Georgia, serif; font-size: clamp(36px, 6vw, 64px); font-weight: 400; line-height: 1.1; }
+  </style>
+</head>
+<body>
+  <header><strong>HOST WEBSITE</strong></header>
+  <main>
+    <div class="tag">EMBED TEST PAGE</div>
+    <h1>Your website, with a shopping assistant.</h1>
+    <p>This is a separate sample host page. Use the floating <strong>Ask Aura</strong> button at the bottom-right to test the widget. It is mounted as a custom element and its styles are isolated from this page.</p>
+    <p>The widget uses mock products and a demo checkout. Voice input depends on browser support and microphone permission.</p>
+  </main>
+  <aurelia-shopping-widget></aurelia-shopping-widget>
+ <script src="/aurelia-widget.js"></script>
+</body>
+</html>
